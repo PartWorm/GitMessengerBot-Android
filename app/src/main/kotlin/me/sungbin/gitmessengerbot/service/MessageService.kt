@@ -26,8 +26,8 @@ class MessageService : NotificationListenerService() {
     }
 
     override fun onDestroy() {
+        // toast(applicationContext, getString(R.string.service_message_bot_stop)) [TODO] Fix memory leak
         super.onDestroy()
-        toast(applicationContext, getString(R.string.service_message_bot_stop))
     }
 
     override fun onNotificationPosted(sbn: StatusBarNotification) {
