@@ -15,7 +15,7 @@ import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import me.sungbin.gitmessengerbot.activity.setup.github.GithubAouthService
 import me.sungbin.gitmessengerbot.activity.setup.github.GithubUserService
-import me.sungbin.gitmessengerbot.secret.SecretConfig
+import me.sungbin.gitmessengerbot.secretplaceholder.SecretConfigPlaceholder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
@@ -85,8 +85,8 @@ class GithubRepoImpl @Inject constructor(
                         GithubAouthService::class.java
                     ).getAccessToken(
                         requestCode,
-                        SecretConfig.GithubOauthClientId,
-                        SecretConfig.GithubOauthClientSecret
+                        SecretConfigPlaceholder.GithubOauthClientId,
+                        SecretConfigPlaceholder.GithubOauthClientSecret
                     ).await()
                 )
             )

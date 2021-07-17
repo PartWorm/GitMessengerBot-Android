@@ -34,6 +34,7 @@ object Versions {
         const val Landscapist = "1.2.8"
         const val Browser = "1.3.0"
         const val ConstraintLayout = "1.0.0-alpha08"
+        const val Material = "1.2.0-alpha06"
     }
 
     object Util {
@@ -101,10 +102,11 @@ object Dependencies {
         "androidx.browser:browser:${Versions.Ui.Browser}",
         "com.github.skydoves:landscapist-glide:${Versions.Ui.Landscapist}",
         "androidx.constraintlayout:constraintlayout-compose:${Versions.Ui.ConstraintLayout}",
+        "com.google.android.material:material:${Versions.Ui.Material}"
     )
 
     val util = listOf(
-        "com.balsikandar.android:crashreporter:${Versions.Util.CrashReporter}",
+        //"com.balsikandar.android:crashreporter:${Versions.Util.CrashReporter}",
         "com.google.code.gson:gson:${Versions.Util.Gson}"
     )
 

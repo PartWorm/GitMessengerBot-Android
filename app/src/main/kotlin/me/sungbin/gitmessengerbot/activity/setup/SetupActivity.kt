@@ -59,7 +59,7 @@ import me.sungbin.gitmessengerbot.activity.setup.github.model.GithubTokenRespons
 import me.sungbin.gitmessengerbot.activity.setup.github.model.GithubUserResponse
 import me.sungbin.gitmessengerbot.activity.setup.github.repo.GithubRepo
 import me.sungbin.gitmessengerbot.activity.setup.github.repo.GithubResult
-import me.sungbin.gitmessengerbot.secret.SecretConfig
+import me.sungbin.gitmessengerbot.secretplaceholder.SecretConfigPlaceholder
 import me.sungbin.gitmessengerbot.theme.MaterialTheme
 import me.sungbin.gitmessengerbot.theme.SystemUiController
 import me.sungbin.gitmessengerbot.theme.colors
@@ -216,7 +216,7 @@ class SetupActivity : ComponentActivity() {
                             if (notificationPermissionGranted && storagePermissionGranted) {
                                 Web.open(
                                     applicationContext,
-                                    Web.Link.Custom(SecretConfig.GithubOauthAddress)
+                                    Web.Link.Custom(SecretConfigPlaceholder.GithubOauthAddress)
                                 )
                             } else {
                                 toast(
